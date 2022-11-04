@@ -12,19 +12,29 @@ export default async function SimpleNotesPage() {
     return (
         <div>
             <h1>Simple Notes</h1>
-
+            {notes.map((note) => (
+                    <Link href={`/P1-SimpleNotes/${note.id}`}>
+                        <div>
+                            <h2>{note.note_title}</h2>
+                            <p>{note.completed_bool}</p>
+                            <p>{note.note}</p>
+                            <p>{note.created}</p>
+                        </div>
+                    </Link>
+            ))}
         </div>
     )
 }
 
-function Note ({ note }: any) {
-    const { id, title, content, created } = note || {};
+function Note ({ notedata }: any) {
+    const { id, note, completed_bool, note_title, created } = notedata || {};
 
     return (
         <Link href={`/P1-SimpleNotes/${id}`}>
             <div>
-                <h2>{title}</h2>
-                <p>{content}</p>
+                <h2>{note_title}</h2>
+                <p>{completed_bool}</p>
+                <p>{note}</p>
                 <p>{created}</p>
             </div>
         </Link>
