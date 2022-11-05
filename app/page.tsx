@@ -40,6 +40,10 @@ export default function HomePage() {
                 <div id="Post-1">
                     <h2>- {Posts.post1.title}</h2>
                     <p>- {Posts.post1.content}</p>
+                    <ul>
+                        <li> Started 11/4/2022 </li>
+                        <li> Simple CRUD App completed 11/5/2022</li>
+                    </ul>
                     <a href={Posts.post1.link}>Project Link</a>
                 </div>
                 <div id="Post-2">
