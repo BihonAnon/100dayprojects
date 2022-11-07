@@ -1,4 +1,4 @@
-import DeleteNote from './DeleteNote';
+
 async function getNote(noteId: string) {
     const res = await fetch(`http://127.0.0.1:8090/api/collections/notes/records/${noteId}`,
     //incremental static recaching (ISR) - https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration
@@ -19,7 +19,6 @@ export default async function SimpleNotesPage({ params }: any) {
                 <div>{note.completed_bool}</div>
                 <div>{note.note}</div>
                 <div className="createdat">Created At: {note.created}</div>
-                <DeleteNote />
             </div>
         </div>
     );

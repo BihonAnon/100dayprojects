@@ -12,9 +12,9 @@ export default function HomePage() {
             link: "./P1-SimpleNotes",
         },
         post2: {
-            title: "Post 2",
-            content: "This is the content for post 2",
-            link: "tbd",
+            title: "Project 2: DalTech Employee Register",
+            content: "DalTech Employee Register, is an implementation of pocketbase and nextJS 13. It is a simple employee register that allows you to create, read, update, and delete employees. Each user has their own employees and can only access their own employees. Each users employees is front to end encrypted. The app is hosted on Vercel.",
+            link: "http://localhost:3000/P2-DalTech-Employee-Register",
         },
     };
     return (
@@ -49,6 +49,9 @@ export default function HomePage() {
                 <div id="Post-2">
                     <h2>- {Posts.post2.title}</h2>
                     <p>- {Posts.post2.content}</p>
+                    <ul>
+                        <li> Started 11/6/2022 </li>
+                    </ul>    
                     <a href={Posts.post2.link}>Project Link</a>
                 </div>
             </div>
